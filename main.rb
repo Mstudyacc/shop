@@ -12,8 +12,8 @@ require_relative "lib/product"
 require_relative "lib/book"
 require_relative "lib/film"
 
-item = Film.new
-item.price = 100
-item.value = 290
+leon = Film.new(price: 990, amount: 5)
+puts "Film leon is for #{leon.price}$"
 
-puts "#{item.class} is for #{item.price}"
+book = Book.new(price: 50, value: 1)
+puts "And we have #{book.class} for #{book.price}"
