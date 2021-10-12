@@ -12,8 +12,25 @@ require_relative "lib/product"
 require_relative "lib/book"
 require_relative "lib/film"
 
-leon = Film.new(price: 990, amount: 5)
-puts "Film leon is for #{leon.price}$"
+products = []
 
-book = Book.new(price: 50, value: 1)
-puts "And we have #{book.class} for #{book.price}"
+products << Film.new(
+  name: 'Леон', year: '1994', director: 'Люк Бессон', price: 990, value: 5
+)
+
+products << Film.new(
+  name: 'Дурак', year: '2014', director: 'Юрий Быков', price: 390, value: 1
+)
+
+products << Book.new(
+  name: 'Идиот',
+  genre: 'роман',
+  author: 'Федор Достоевский',
+  price: 1500,
+  value: 10
+)
+
+# Выводим все продукты в консоль просто передавая их методу puts
+puts 'Вот какие товары у нас есть:'
+puts
+products.each { |product| puts product }
