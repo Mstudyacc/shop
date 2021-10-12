@@ -8,9 +8,9 @@ if Gem.win_platform?
 end
 
 
-require_relative "product"
-require_relative "book"
-require_relative "film"
+require_relative "lib/product"
+require_relative "lib/book"
+require_relative "lib/film"
 
 item = Film.new
 item.price = 100
